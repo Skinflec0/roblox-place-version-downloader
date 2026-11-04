@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  body{width:280px;font:14px system-ui,sans-serif;background:#18191d;color:#fff;padding:14px;margin:0}
+  h3{margin:0 0 4px;font-size:15px} h4{margin:16px 0 4px;font-size:13px;color:#cfd3dc}
+  label{display:block;margin:8px 0 3px;font-size:12px;color:#aab}
+  input{width:100%;box-sizing:border-box;padding:7px;border-radius:6px;border:1px solid #444;background:#25272d;color:#fff}
+  .row{display:flex;gap:8px}.row>div{flex:1}
+  button{margin-top:10px;width:100%;padding:8px;border:0;border-radius:6px;background:#335fff;color:#fff;font-weight:600;cursor:pointer}
+  button.sec{background:#2b2f38}
+  #msg{margin-top:10px;font-size:12px;color:#aab;min-height:14px;word-break:break-word}
+  hr{border:0;border-top:1px solid #333;margin:14px 0 0}
+</style></head>
+<body>
+  <h3>Place downloader</h3>
+  <label>Place ID</label><input id="pid" inputmode="numeric" placeholder="14847148910">
+  <h4>Single version</h4>
+  <input id="ver" inputmode="numeric" placeholder="Version # (e.g. 2713)">
+  <button id="go">Download .rbxl</button>
+  <hr>
+  <h4>Version range</h4>
+  <div class="row"><div><input id="from" inputmode="numeric" placeholder="From"></div><div><input id="to" inputmode="numeric" placeholder="To"></div></div>
+  <button id="range" class="sec">Download range</button>
+  <div id="msg"></div>
+  <script src="popup.js"></script>
+</body></html>

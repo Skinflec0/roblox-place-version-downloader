@@ -1,0 +1,24 @@
+/* Used only when there is no native Restore button on the page to copy from. */
+.rbxvd-fallback {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.rbxvd-fallback:hover { background: rgba(255, 255, 255, 0.08); }
+.rbxvd-fallback svg { width: 20px; height: 20px; fill: currentColor; }
+
+/* Shared */
+.rbxvd-btn { margin-left: 4px; white-space: nowrap; }
+.rbxvd-btn[disabled] { opacity: 0.6; pointer-events: none; }
+.rbxvd-btn.rbxvd-ok { color: #3fb950 !important; }
+.rbxvd-btn.rbxvd-err { color: #f85149 !important; }

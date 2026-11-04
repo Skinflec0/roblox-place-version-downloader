@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Place Version Downloader",
+  "version": "1.4.0",
+  "description": "Download place versions from Version History, and one-click download of places/experiences from the Creator Dashboard (saved as .rbxl).",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": [
+    "https://create.roblox.com/*",
+    "https://assetdelivery.roblox.com/*",
+    "https://economy.roblox.com/*",
+    "https://apis.roblox.com/*",
+    "https://games.roblox.com/*",
+    "https://develop.roblox.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://create.roblox.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://create.roblox.com/*"],
+      "js": ["cards.js"],
+      "css": ["cards.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "action": {
+    "default_title": "Roblox Place Downloader",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icon16.png", "48": "icon48.png" }
+  }
+}
